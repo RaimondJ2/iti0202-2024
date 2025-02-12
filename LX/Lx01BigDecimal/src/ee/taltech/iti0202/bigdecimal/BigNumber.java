@@ -7,33 +7,28 @@ import java.math.MathContext;
 public class BigNumber {
     /**
      * Multiply 2 int values and return product in BigInteger
-     * 
      * @param factor1 first factor
      * @param factor2 second factor
      * @return factor1 x factor2
      */
     public BigInteger multiplyBigInteger(int factor1, int factor2) {
-        int ab = 0;
         return BigInteger.valueOf(factor1).multiply(BigInteger.valueOf(factor2));
     }
 
     /**
      * Divide 2 values and return quotient in BigInteger
      * If divisor is 0, return 0
-     * 
      * @param dividend dividend
-     * @param divisor  divisor
+     * @param divisor divisor
      * @return dividend / divisor
      */
     public BigInteger divideBigInteger(BigInteger dividend, int divisor) {
-        if (divisor == 0)
-            return BigInteger.ZERO;
+        if (divisor == 0) return BigInteger.ZERO;
         return dividend.divide(BigInteger.valueOf(divisor));
     }
 
     /**
      * Add 2 values and return sum in BigInteger
-     * 
      * @param add1 first value
      * @param add2 second value
      * @return add1 + add2
@@ -44,8 +39,7 @@ public class BigNumber {
 
     /**
      * Subtract 2 values and return difference in BigInteger
-     * 
-     * @param minuend    first value
+     * @param minuend first value
      * @param subtrahend second value
      * @return value1 - value2
      */
@@ -56,10 +50,9 @@ public class BigNumber {
     /**
      * Multiply double value with int multiplier, round according to rounding
      * and return in BigDecimal
-     * 
-     * @param value      value to calculate
+     * @param value value to calculate
      * @param multiplier multiplier to use
-     * @param rounding   rounding to use
+     * @param rounding rounding to use
      * @return value multiplied by multiplier and rounded by rounding
      */
     public BigDecimal multiplyAndRoundBigDecimal(double value, int multiplier, int rounding) {
@@ -70,13 +63,11 @@ public class BigNumber {
     /**
      * Calculate n factorial and return in BigInteger
      * If n < 0, it should return 1
-     * 
      * @param n n-th factorial to calculate
      * @return n-th factorial
      */
     public BigInteger factorial(int n) {
-        if (n < 0)
-            return BigInteger.ONE;
+        if (n < 0) return BigInteger.ONE;
         BigInteger factorial = BigInteger.ONE;
         for (int i = 1; i <= n; i++) {
             factorial = factorial.multiply(BigInteger.valueOf(i));
@@ -86,8 +77,7 @@ public class BigNumber {
 
     /**
      * Calculates base to the power of exponent and return in BigInteger
-     * 
-     * @param base     base
+     * @param base base
      * @param exponent exponent
      * @return base to the power of exponent
      */
@@ -95,12 +85,11 @@ public class BigNumber {
         return BigInteger.valueOf(base).pow(exponent);
     }
 
+
     /**
-     * Round val1 and val2 with the rounding given, and check if they are equal
-     * after that
-     * 
-     * @param val1     first value to round
-     * @param val2     second value to round
+     * Round val1 and val2 with the rounding given, and check if they are equal after that
+     * @param val1 first value to round
+     * @param val2 second value to round
      * @param rounding rounding to use
      * @return true or false if val1 and val2 are equal after rounded with rounding
      */
@@ -114,8 +103,7 @@ public class BigNumber {
      * @return n-th fib number value
      */
     public BigInteger fibonacci(int n) {
-        if (n <= 0)
-            return BigInteger.ZERO;
+        if (n <= 0) return BigInteger.ZERO;
         BigInteger lastFibNumber1 = BigInteger.ONE;
         BigInteger lastFibNumber2 = BigInteger.ONE;
         BigInteger curFibNumber = BigInteger.ONE;
@@ -133,10 +121,8 @@ public class BigNumber {
      * @return n-th lucas number
      */
     public BigInteger lucas(int n) {
-        if (n <= 0)
-            return BigInteger.TWO;
-        if (n == 1)
-            return BigInteger.ONE;
+        if (n <= 0) return BigInteger.TWO;
+        if (n == 1) return BigInteger.ONE;
         BigInteger lastFibNumber1 = BigInteger.ONE;
         BigInteger lastFibNumber2 = BigInteger.ONE;
         BigInteger curFibNumber = BigInteger.TWO;
