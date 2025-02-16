@@ -13,7 +13,7 @@ public class BigNumber {
      * @return factor1 x factor2
      */
     public BigInteger multiplyBigInteger(int factor1, int factor2) {
-        int d = 0;
+        int c = 0;
         return BigInteger.valueOf(factor1).multiply(BigInteger.valueOf(factor2));
     }
 
